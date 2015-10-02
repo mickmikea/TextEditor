@@ -33,7 +33,25 @@ if (docu){
 }
 
 
-//Make array of words of key terms
-//compare words to each place in array (length)
+//editing
 
-//stack (lineflow??)
+int x, y;
+
+while(1){
+	ch = wgetch();
+	place = getxy(mainwin, x, y)
+	if (ch == KEY_BACKSPACE){
+		//delete from array
+		//reprint with extra space at end
+	}
+	else if (ch == Function keys){
+		//call respective function
+		//including exit, which breaks and saves
+	}
+	else if (ch == KEY_STAB){
+		//insert 5 spaces
+	}
+	else {
+		//append ch to array line and reprint
+	}
+}
