@@ -37,3 +37,4 @@ if (docu){
 //compare words to each place in array (length)
 
 //stack (lineflow??)
+//michael 
