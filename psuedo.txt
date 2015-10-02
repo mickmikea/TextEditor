@@ -35,11 +35,11 @@ if (docu){
 
 //editing
 
-int x, y;
+int x, yline;
 
 while(1){
 	ch = wgetch();
-	place = getxy(mainwin, x, y)
+	place = getxy(mainwin, x, yline);
 	if (ch == KEY_BACKSPACE){
 		//delete from array
 		//reprint with extra space at end
