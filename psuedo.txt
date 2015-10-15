@@ -55,3 +55,409 @@ while(1){
 		//append ch to array line and reprint
 	}
 }
+
+
+void syntax_highlighting(char **array)
+{
+    int i, j;
+int max_x, max_y;
+getmaxyx(stdscr, max_y, max_x);
+
+for (i = 0; i < max_y; i++)
+{
+
+    char temp[250];
+
+    int q;
+    for (q=0; q < max_y; q++)
+    {
+        if (array[i][q] == NULL)
+        {
+            break;
+        }
+        temp[q] = array[i][q];
+    }
+    for (j = 0; j < max_y; j++)
+    {
+        if (temp[j] == NULL)
+        {
+            break;
+        }
+        else if (temp[j] == 'v' && temp[j+1] == 'a' && temp[j+2] == 'r' && temp [j+3] == ' ')
+        {
+            char temp2[250];
+            int x=0;
+            for (x = 0; x < j; x++)
+            {
+                temp2[x] = temp[x];
+            }
+            temp2[x] = '¥';
+            x++;
+            temp2[x] = 'v'; x++; temp2[x] = 'a'; x++; temp2[x] = 'r'; x++;
+            temp2[x] = '¥';
+            x++;
+            int y = x+2;
+            for (x; x < (250-y); x++)
+            {
+                temp2[x] = temp[x-2];
+            }
+
+            int t;
+            for (t = 0; t < 250; t++)
+            {
+                if(temp2[t] == '®')
+                {
+                    temp[t] = temp2[t];
+                    break;
+                }
+                else
+                {
+                    temp[t] = temp2[t];
+                }
+            }
+
+        }
+        else if (temp[j] == 'p' && temp[j+1] == 'r' && temp[j+2] == 'o' && temp[j+3] == 'c' && temp[j+4] == 'e' && temp[j+5] == 'd' && temp[j+6] == 'u' && temp[j+7] == 'r' && temp[j+8] == 'e' && temp[j+9] == ' ')
+        {
+            char temp2[250];
+            int x=0;
+            for (x = 0; x < j; x++)
+            {
+                temp2[x] = temp[x];
+            }
+            temp2[x] = '¥';
+            x++;
+            temp2[x] = 'p'; x++; temp2[x] = 'r'; x++; temp2[x] = 'o'; x++; temp2[x] = 'c'; x++; temp2[x] = 'e'; x++; temp2[x] = 'd'; x++; temp2[x] = 'u'; x++; temp2[x] = 'r'; x++; temp2[x] = 'e'; x++;
+            temp2[x] = '¥';
+            x++;
+            int y = x+2;
+            for (x; x < (250-y); x++)
+            {
+                temp2[x] = temp[x-2];
+            }
+
+            int t;
+            for (t = 0; t < 250; t++)
+            {
+                if(temp2[t] == '®')
+                {
+                    temp[t] = temp2[t];
+                    break;
+                }
+                else
+                {
+                    temp[t] = temp2[t];
+                }
+            }
+        }
+        else if (temp[j] == 'c' && temp[j+1] == 'o' && temp[j+2] == 'n' && temp[j+3] == 's' && temp[j+4] == 't' && temp[j+5] == ' ')
+        {
+            char temp2[250];
+            int x=0;
+            for (x = 0; x < j; x++)
+            {
+                temp2[x] = temp[x];
+            }
+            temp2[x] = '¥';
+            x++;
+            temp2[x] = 'c'; x++; temp2[x] = 'o'; x++; temp2[x] = 'n'; x++; temp2[x] = 's'; x++; temp2[x] = 't'; x++;
+            temp2[x] = '¥';
+            x++;
+            int y = x+2;
+            for (x; x < (250-y); x++)
+            {
+                temp2[x] = temp[x-2];
+            }
+
+            int t;
+            for (t = 0; t < 250; t++)
+            {
+                if(temp2[t] == '®')
+                {
+                    temp[t] = temp2[t];
+                    break;
+                }
+                else
+                {
+                    temp[t] = temp2[t];
+                }
+            }
+        }
+        else if (temp[j] == 'c' && temp[j+1] == 'a' && temp[j+2] == 'l' && temp[j+3] == 'l' && temp[j+4] == ' ')
+        {
+            char temp2[250];
+            int x=0;
+            for (x = 0; x < j; x++)
+            {
+                temp2[x] = temp[x];
+            }
+            temp2[x] = '¥';
+            x++;
+            temp2[x] = 'c'; x++; temp2[x] = 'a'; x++; temp2[x] = 'l'; x++; temp2[x] = 'l'; x++;
+            temp2[x] = '¥';
+            x++;
+            int y = x+2;
+            for (x; x < (250-y); x++)
+            {
+                temp2[x] = temp[x-2];
+            }
+
+            int t;
+            for (t = 0; t < 250; t++)
+            {
+                if(temp2[t] == '®')
+                {
+                    temp[t] = temp2[t];
+                    break;
+                }
+                else
+                {
+                    temp[t] = temp2[t];
+                }
+            }
+        }
+        else if (temp[j] == 'b' && temp[j+1] == 'e' && temp[j+2] == 'g' && temp[j+3] == 'i' && temp[j+4] == 'n' && temp[j+5] == ' ')
+        {
+            char temp2[250];
+            int x=0;
+            for (x = 0; x < j; x++)
+            {
+                temp2[x] = temp[x];
+            }
+            temp2[x] = '¥';
+            x++;
+            temp2[x] = 'b'; x++; temp2[x] = 'e'; x++; temp2[x] = 'g'; x++; temp2[x] = 'i'; x++; temp2[x] = 'n'; x++;
+            temp2[x] = '¥';
+            x++;
+            int y = x+2;
+            for (x; x < (250-y); x++)
+            {
+                temp2[x] = temp[x-2];
+            }
+
+            int t;
+            for (t = 0; t < 250; t++)
+            {
+                if(temp2[t] == '®')
+                {
+                    temp[t] = temp2[t];
+                    break;
+                }
+                else
+                {
+                    temp[t] = temp2[t];
+                }
+            }
+        }
+        else if (temp[j] == 'e' && temp[j+1] == 'n' && temp[j+2] == 'd' && temp[j+3] == ' ')
+        {
+            char temp2[250];
+            int x=0;
+            for (x = 0; x < j; x++)
+            {
+                temp2[x] = temp[x];
+            }
+            temp2[x] = '¥';
+            x++;
+            temp2[x] = 'e'; x++; temp2[x] = 'n'; x++; temp2[x] = 'd'; x++;
+            temp2[x] = '¥';
+            x++;
+            int y = x+2;
+            for (x; x < (250-y); x++)
+            {
+                temp2[x] = temp[x-2];
+            }
+
+            int t;
+            for (t = 0; t < 250; t++)
+            {
+                if(temp2[t] == '®')
+                {
+                    temp[t] = temp2[t];
+                    break;
+                }
+                else
+                {
+                    temp[t] = temp2[t];
+                }
+            }
+        }
+        else if (temp[j] == 'i' && temp[j+1] == 'f' && temp[j+2] == ' ')
+        {
+            char temp2[250];
+            int x=0;
+            for (x = 0; x < j; x++)
+            {
+                temp2[x] = temp[x];
+            }
+            temp2[x] = '¥';
+            x++;
+            temp2[x] = 'i'; x++; temp2[x] = 'f'; x++;
+            temp2[x] = '¥';
+            x++;
+            int y = x+2;
+            for (x; x < (250-y); x++)
+            {
+                temp2[x] = temp[x-2];
+            }
+
+            int t;
+            for (t = 0; t < 250; t++)
+            {
+                if(temp2[t] == '®')
+                {
+                    temp[t] = temp2[t];
+                    break;
+                }
+                else
+                {
+                    temp[t] = temp2[t];
+                }
+            }
+        }
+        else if (temp[j] == 't' && temp[j+1] == 'h' && temp[j+2] == 'e' && temp[j+3] == 'n' && temp[j+4] == ' ')
+        {
+            char temp2[250];
+            int x=0;
+            for (x = 0; x < j; x++)
+            {
+                temp2[x] = temp[x];
+            }
+            temp2[x] = '¥';
+            x++;
+            temp2[x] = 't'; x++; temp2[x] = 'h'; x++; temp2[x] = 'e'; x++; temp2[x] = 'n'; x++;
+            temp2[x] = '¥';
+            x++;
+            int y = x+2;
+            for (x; x < (250-y); x++)
+            {
+                temp2[x] = temp[x-2];
+            }
+
+            int t;
+            for (t = 0; t < 250; t++)
+            {
+                if(temp2[t] == '®')
+                {
+                    temp[t] = temp2[t];
+                    break;
+                }
+                else
+                {
+                    temp[t] = temp2[t];
+                }
+            }
+        }
+        else if (temp[j] == 'w' && temp[j+1] == 'h' && temp[j+2] == 'i' && temp[j+3] == 'l' && temp[j+4] == 'e' && temp[j+5] == ' ')
+        {
+            char temp2[250];
+            int x=0;
+            for (x = 0; x < j; x++)
+            {
+                temp2[x] = temp[x];
+            }
+            temp2[x] = '¥';
+            x++;
+            temp2[x] = 'w'; x++; temp2[x] = 'h'; x++; temp2[x] = 'i'; x++; temp2[x] = 'l'; x++; temp2[x] = 'e'; x++;
+            temp2[x] = '¥';
+            x++;
+            int y = x+2;
+            for (x; x < (250-y); x++)
+            {
+                temp2[x] = temp[x-2];
+            }
+
+            int t;
+            for (t = 0; t < 250; t++)
+            {
+                if(temp2[t] == '®')
+                {
+                    temp[t] = temp2[t];
+                    break;
+                }
+                else
+                {
+                    temp[t] = temp2[t];
+                }
+            }
+        }
+        else if (temp[j] == 'd' && temp[j+1] == 'o' && temp[j+2] == ' ')
+        {
+            char temp2[250];
+            int x=0;
+            for (x = 0; x < j; x++)
+            {
+                temp2[x] = temp[x];
+            }
+            temp2[x] = '¥';
+            x++;
+            temp2[x] = 'd'; x++; temp2[x] = 'o'; x++;
+            temp2[x] = '¥';
+            x++;
+            int y = x+2;
+            for (x; x < (250-y); x++)
+            {
+                temp2[x] = temp[x-2];
+            }
+
+            int t;
+            for (t = 0; t < 250; t++)
+            {
+                if(temp2[t] == '®')
+                {
+                    temp[t] = temp2[t];
+                    break;
+                }
+                else
+                {
+                    temp[t] = temp2[t];
+                }
+            }
+        }
+
+        else if (temp[j] == 'o' && temp[j+1] == 'd' && temp[j+2] == 'd' && temp[j+3] == ' ')
+        {
+            char temp2[250];
+            int x=0;
+            for (x = 0; x < j; x++)
+            {
+                temp2[x] = temp[x];
+            }
+            temp2[x] = '¥';
+            x++;
+            temp2[x] = 'o'; x++; temp2[x] = 'd'; x++; temp2[x] = 'd'; x++;
+            temp2[x] = '¥';
+            x++;
+            int y = x+2;
+            for (x; x < (250-y); x++)
+            {
+                temp2[x] = temp[x-2];
+            }
+
+            int t;
+            for (t = 0; t < 250; t++)
+            {
+                if(temp2[t] == '®')
+                {
+                    temp[t] = temp2[t];
+                    break;
+                }
+                else
+                {
+                    temp[t] = temp2[t];
+                }
+            }
+        }
+
+    }
+            int t;
+            for (t = 0; t < 250; t++)
+            {
+                if(temp[t] != '®')
+                {
+                   printf("%c", temp[t]);
+                }
+
+            }
+    }
+}
