@@ -55,3 +55,35 @@ while(1){
 		//append ch to array line and reprint
 	}
 }
+
+void print(char **array )
+{
+    move(0,0);
+    printw("%s", "f1 = undo    f3 = search    f5=open     f6 = save\n");
+    printw("_____________________________________________________________");
+    int i; int j;
+    int x, y;
+    getmaxyx(stdscr, y, x);
+    for (i=0; i < y; i++)
+    {
+        for(j=0; j < x; j++)
+        {
+            if (array[i][j] == '¥')
+            {
+                j++;
+                while (array[i][j] != '¥')
+                {
+                addch(array[i][j]);
+                j++;
+                }
+
+            }
+            if (array[i][j] != '®')
+            {
+              addch(array[i][j]);
+            }
+
+        }
+    refresh();
+    }
+}
